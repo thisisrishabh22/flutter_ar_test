@@ -246,11 +246,15 @@ class _CloudAnchorWidgetState extends State<CloudAnchorWidget> {
         var newNode = ARNode(
             type: NodeType.webGLB,
             uri:
-                "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF-Binary/Duck.glb",
+                "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/1.0/Box/glTF-Binary/Box.glb",
             scale: Vector3(0.2, 0.2, 0.2),
             position: Vector3(0.0, 0.0, 0.0),
             rotation: Vector4(1.0, 0.0, 0.0, 0.0),
             data: {"onTapText": "Ouch, that hurt!"});
+
+        var serializedNode = newNode.toMap();
+        print("New object: " + serializedNode.toString());
+
         bool? didAddNodeToAnchor = await this
             .arObjectManager!
             .addNode(newNode, planeAnchor: newAnchor);
