@@ -4,8 +4,8 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
 
-import 'examples/objectgesturesexample.dart';
-import 'examples/cloudanchorexample.dart';
+import 'package:ar_test/examples/cloudanchorexample.dart';
+import 'package:ar_test/examples/objectgesturesexample.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
